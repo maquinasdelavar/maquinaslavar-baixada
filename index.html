@@ -1623,6 +1623,29 @@
       outline: 3px solid var(--primary);
       outline-offset: 2px;
     }
+
+    /* Correções específicas para mobile */
+    @media (max-width: 768px) {
+      .btn {
+        width: 100%;
+        white-space: normal !important;
+        padding: 16px 24px !important;
+        font-size: 1rem !important;
+        text-align: center;
+      }
+
+      .cta-group {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .wpp-float {
+        bottom: 20px;
+        right: 16px;
+        width: 60px;
+        height: 60px;
+      }
+    }
   </style>
 </head>
 
@@ -1649,7 +1672,7 @@
       <a href="#" class="navbar-logo" aria-label="Doutor Resolve - Início">
         <img src="img.png" alt="Marcas atendidas: Brastemp, Consul, Electrolux">
         <div class="navbar-brand-text">
-          <span class="navbar-brand-name">🔧 Doutor Resolve</span>
+          <span class="navbar-brand-name">🔧 Vicentec</span>
           <span class="navbar-brand-sub">Máquinas de Lavar</span>
         </div>
       </a>
@@ -1722,8 +1745,8 @@
         <h1>
           Sua Máquina "Adoeceu"?<br />
           <span
-            style="background: linear-gradient(135deg, #a5b4fc 0%, #ffffff 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">O
-            Doutor Resolve.</span>
+            style="background: linear-gradient(135deg, #a5b4fc 0%, #ffffff 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">A
+            Vicentec Resolve.</span>
         </h1>
 
         <p class="hero-subtitle">
@@ -2089,7 +2112,7 @@
             <h3>Comece Agora!</h3>
             <p>Preencha o formulário rápido e envie direto pelo WhatsApp.</p>
 
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfnuaA--i-cT-xw1jCER1ZbehXdTfCR5mDWZxTl6RSUdCQypA/viewform?usp=dialog"
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScJ6KengT6ypqsqoNZX1ApeL-Oz2tGkx_wLJdg17vRNaJD6Hw/viewform?usp=publish-editor"
               class="btn btn-white" style="width: 100%; background: #FFFFFF; color: var(--primary);">
               <span class="btn-icon">🚀</span>
               <span>Preencher Formulário</span>
