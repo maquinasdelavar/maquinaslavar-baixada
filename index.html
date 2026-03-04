@@ -1,0 +1,2586 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO Meta Tags -->
+  <title>Diagnóstico Grátis de Máquina de Lavar | Orçamento em 5 Minutos</title>
+  <meta name="description"
+    content="Sua máquina de lavar quebrou? Diagnóstico GRÁTIS em 5 minutos. Descubra se o reparo é simples ou complexo e receba orçamento instantâneo no WhatsApp. Atendimento imediato!" />
+  <meta name="keywords"
+    content="conserto máquina de lavar, diagnóstico grátis, orçamento reparo, assistência técnica, técnico máquina lavar" />
+  <meta name="author" content="Diagnóstico Rápido" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Diagnóstico Grátis de Máquina de Lavar em 5 Minutos" />
+  <meta property="og:description"
+    content="Descubra o problema da sua máquina e receba orçamento instantâneo no WhatsApp!" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+  <style>
+    /* ========================================
+       ANNOUNCEMENT BAR
+       ======================================== */
+    .announcement-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1001;
+      background: linear-gradient(90deg, #0052CC 0%, #667eea 50%, #764ba2 100%);
+      color: #fff;
+      text-align: center;
+      padding: 9px 16px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      overflow: hidden;
+    }
+
+    .announcement-bar .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #FCD34D;
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulseDot 1.4s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulseDot {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.5);
+        opacity: 0.7;
+      }
+    }
+
+    .announcement-bar .bar-cta {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 20px;
+      padding: 3px 12px;
+      font-size: 0.78rem;
+      color: #fff;
+      text-decoration: none;
+      margin-left: 8px;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .announcement-bar .bar-cta:hover {
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    /* bump navbar + body down more for announcement bar */
+    body {
+      padding-top: 108px !important;
+    }
+
+    .navbar {
+      top: 38px !important;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding-top: 96px !important;
+      }
+
+      .announcement-bar {
+        font-size: 0.74rem;
+        padding: 7px 12px;
+      }
+
+      .announcement-bar .bar-cta {
+        display: none;
+      }
+    }
+
+    /* ========================================
+       HERO SOCIAL PROOF BAR
+       ======================================== */
+    .hero-social-proof {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .hsp-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: rgba(255, 255, 255, 0.95);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .hsp-stars {
+      color: #FCD34D;
+      font-size: 1rem;
+      letter-spacing: -2px;
+    }
+
+    .hsp-divider {
+      width: 1px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    @media (max-width: 600px) {
+      .hsp-divider {
+        display: none;
+      }
+
+      .hero-social-proof {
+        gap: 14px;
+      }
+
+      .hsp-item {
+        font-size: 0.8rem;
+      }
+    }
+
+    /* ========================================
+       BRAND STRIP
+       ======================================== */
+    .brand-strip {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+      overflow: hidden;
+    }
+
+    .brand-strip-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .brand-strip-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+      margin-right: 8px;
+    }
+
+    .brand-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: 100px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      background: var(--bg-secondary);
+      transition: var(--transition);
+    }
+
+    .brand-pill:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: rgba(0, 102, 255, 0.04);
+    }
+
+    /* ========================================
+       TESTIMONIALS
+       ======================================== */
+    .testimonials {
+      background: var(--bg-secondary);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .testimonial-card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .testimonial-card:hover {
+      box-shadow: var(--shadow-xl);
+      transform: translateY(-4px);
+    }
+
+    .testimonial-card::before {
+      content: '\201C';
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      font-size: 4rem;
+      color: var(--primary);
+      opacity: 0.12;
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+
+    .testimonial-stars {
+      color: #F59E0B;
+      font-size: 1.1rem;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+
+    .testimonial-text {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testimonial-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .testimonial-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+    }
+
+    .testimonial-role {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .testimonial-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #DCFCE7;
+      color: #15803D;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 100px;
+      margin-top: 4px;
+    }
+
+    /* ========================================
+       STATS COUNTER
+       ======================================== */
+    .stats-section {
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+      padding: 72px 0;
+    }
+
+    .stats-section h2 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .stats-section>.container>.section-lead {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 56px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+
+    @media (max-width: 768px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: 32px 20px;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: var(--transition);
+    }
+
+    .stat-card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .stat-card .stat-number {
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #a5b4fc 0%, #67e8f9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-card .stat-label {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .stat-card .stat-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    /* ========================================
+       FAQ
+       ======================================== */
+    .faq-section {
+      background: #fff;
+    }
+
+    .faq-list {
+      max-width: 780px;
+      margin: 48px auto 0;
+    }
+
+    .faq-item {
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .faq-item.open {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.08);
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      padding: 20px 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .faq-question:hover {
+      background: var(--bg-secondary);
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--bg-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: var(--transition);
+      color: var(--primary);
+    }
+
+    .faq-item.open .faq-icon {
+      background: var(--primary);
+      color: #fff;
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.2s ease;
+      padding: 0 24px;
+    }
+
+    .faq-answer.open {
+      max-height: 300px;
+      padding: 0 24px 20px;
+    }
+
+    .faq-answer p {
+      color: var(--text-secondary);
+      font-size: 0.96rem;
+      line-height: 1.7;
+    }
+
+    /* ========================================
+       CTA FINAL BANNER
+       ======================================== */
+    .cta-final {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 80px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-final::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -20%;
+      width: 500px;
+      height: 500px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+    }
+
+    .cta-final::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+    }
+
+    .cta-final .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-final h2 {
+      color: #fff;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      margin-bottom: 16px;
+    }
+
+    .cta-final p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.125rem;
+      margin-bottom: 40px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-final .btn-cta-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-wpp-large {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 18px 36px;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+      transition: var(--transition);
+    }
+
+    .btn-wpp-large:hover {
+      background: #20BA5A;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(37, 211, 102, 0.55);
+    }
+
+    .btn-wpp-large svg {
+      width: 22px;
+      height: 22px;
+      fill: #fff;
+    }
+
+    .btn-outline-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 2px solid rgba(255, 255, 255, 0.7);
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 16px 30px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .btn-outline-white:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: #fff;
+    }
+
+    .cta-trust-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+
+    .cta-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    /* ========================================
+       SECTION HEADERS
+       ======================================== */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 102, 255, 0.08);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 100px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .section-header h2 {
+      margin-bottom: 12px;
+    }
+
+    .section-lead {
+      color: var(--text-secondary);
+      font-size: 1.0625rem;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    /* ========================================
+       NAVBAR PROFISSIONAL
+       ======================================== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.10);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+      padding: 0;
+    }
+
+    .navbar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .navbar-logo img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .navbar-brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .navbar-brand-name {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+
+    .navbar-brand-sub {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .navbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .navbar-wpp {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25D366;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+      white-space: nowrap;
+    }
+
+    .navbar-wpp:hover {
+      background: #20BA5A;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+    }
+
+    .navbar-wpp svg {
+      width: 18px;
+      height: 18px;
+      fill: #fff;
+    }
+
+    .navbar-cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 10px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      border: 2px solid var(--primary);
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .navbar-cta-secondary:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* Hamburger (mobile) */
+    .navbar-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 6px;
+      border-radius: 8px;
+    }
+
+    .navbar-toggle span {
+      display: block;
+      width: 24px;
+      height: 2.5px;
+      background: var(--text-primary);
+      border-radius: 10px;
+      transition: var(--transition);
+    }
+
+    .navbar-mobile {
+      display: none;
+      flex-direction: column;
+      gap: 12px;
+      padding: 16px 24px 20px;
+      border-top: 1px solid var(--border);
+      background: #fff;
+    }
+
+    .navbar-mobile.open {
+      display: flex;
+    }
+
+    .navbar-mobile .navbar-wpp,
+    .navbar-mobile .navbar-cta-secondary {
+      width: 100%;
+      justify-content: center;
+      font-size: 1rem;
+      padding: 13px 20px;
+    }
+
+    /* WhatsApp flutuante */
+    .wpp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      width: 62px;
+      height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+      text-decoration: none;
+      transition: var(--transition);
+      animation: pulseFab 2.5s infinite;
+    }
+
+    .wpp-float:hover {
+      background: #20BA5A;
+      transform: scale(1.12);
+      animation: none;
+    }
+
+    .wpp-float svg {
+      width: 32px;
+      height: 32px;
+      fill: #fff;
+    }
+
+    @keyframes pulseFab {
+
+      0%,
+      100% {
+        box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+      }
+
+      50% {
+        box-shadow: 0 6px 36px rgba(37, 211, 102, 0.75);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar-actions {
+        display: none;
+      }
+
+      .navbar-toggle {
+        display: flex;
+      }
+
+      .wpp-float {
+        bottom: 20px;
+        right: 16px;
+        width: 54px;
+        height: 54px;
+      }
+    }
+
+    /* Offset do conteúdo por causa da navbar fixa */
+    body {
+      padding-top: 70px;
+    }
+
+    /* ========================================
+       VARIÁVEIS E RESET
+       ======================================== */
+    :root {
+      --primary: #0066FF;
+      --primary-dark: #0052CC;
+      --secondary: #10B981;
+      --accent: #F59E0B;
+      --danger: #EF4444;
+      --bg-primary: #FFFFFF;
+      --bg-secondary: #F8FAFC;
+      --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --text-primary: #0F172A;
+      --text-secondary: #475569;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      --radius: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ========================================
+       TIPOGRAFIA
+       ======================================== */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: clamp(1.25rem, 3vw, 1.75rem);
+      margin-bottom: 0.75rem;
+    }
+
+    h4 {
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+
+    p {
+      color: var(--text-secondary);
+      font-size: 1.0625rem;
+      line-height: 1.7;
+    }
+
+    /* ========================================
+       CONTAINER E LAYOUT
+       ======================================== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        padding: 48px 0;
+      }
+    }
+
+    /* ========================================
+       HEADER / HERO
+       ======================================== */
+    .hero {
+      background: var(--bg-gradient);
+      padding: 90px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.4;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero h1 {
+      color: #FFFFFF;
+      margin-bottom: 24px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 40px;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 12px 24px;
+      border-radius: 100px;
+      color: #FFFFFF;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      margin-bottom: 32px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    /* ========================================
+       BOTÕES
+       ======================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 18px 40px;
+      font-size: 1.0625rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 12px;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+      white-space: nowrap;
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #FFFFFF;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-white {
+      background: #FFFFFF;
+      color: var(--primary);
+    }
+
+    .btn-white:hover {
+      background: #F8FAFC;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-success {
+      background: var(--secondary);
+      color: #FFFFFF;
+    }
+
+    .btn-success:hover {
+      background: #059669;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-icon {
+      font-size: 1.25rem;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    /* ========================================
+       FORMULÁRIO
+       ======================================== */
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+      font-size: 0.9375rem;
+    }
+
+    .form-label .required {
+      color: var(--danger);
+      margin-left: 4px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 1rem;
+      font-family: inherit;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      transition: var(--transition);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-hint {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+      display: block;
+    }
+
+    .form-error {
+      color: var(--danger);
+      font-size: 0.875rem;
+      margin-top: 6px;
+      display: none;
+    }
+
+    .form-error.active {
+      display: block;
+    }
+
+    /* ========================================
+       CARDS
+       ======================================== */
+    .card {
+      background: var(--bg-primary);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      border: 1px solid var(--border);
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-xl);
+      transform: translateY(-4px);
+    }
+
+    .card-icon {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text-primary);
+    }
+
+    .card-description {
+      color: var(--text-secondary);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    /* ========================================
+       GRID DE CATEGORIAS
+       ======================================== */
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin: 48px 0;
+    }
+
+    .category-card {
+      background: var(--bg-primary);
+      border-radius: var(--radius);
+      padding: 28px;
+      border-left: 5px solid;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+    }
+
+    .category-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateX(4px);
+    }
+
+    .category-card.simple {
+      border-color: var(--secondary);
+    }
+
+    .category-card.intermediate {
+      border-color: var(--accent);
+    }
+
+    .category-card.complex {
+      border-color: #F97316;
+    }
+
+    .category-card.urgent {
+      border-color: var(--danger);
+    }
+
+    .category-card.selected {
+      border-width: 3px;
+      box-shadow: var(--shadow-xl);
+    }
+
+    .category-icon {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .category-title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .category-description {
+      color: var(--text-secondary);
+      font-size: 0.9375rem;
+    }
+
+    .category-time {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 6px 12px;
+      background: var(--bg-secondary);
+      border-radius: 6px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .logo {
+      max-width: 220px;
+      height: auto;
+      display: block;
+      margin: 0 auto 28px;
+      filter: brightness(0) invert(1);
+      opacity: 0.92;
+    }
+
+    /* ========================================
+       COMO FUNCIONA (STEPS)
+       ======================================== */
+    .steps {
+      background: var(--bg-primary);
+    }
+
+    .steps-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-top: 48px;
+    }
+
+    .step {
+      text-align: center;
+      position: relative;
+    }
+
+    .step-number {
+      width: 64px;
+      height: 64px;
+      background: var(--bg-gradient);
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin: 0 auto 20px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .step-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .step-description {
+      color: var(--text-secondary);
+    }
+
+    /* ========================================
+       CTA SECTION (STICKY SIDEBAR)
+       ======================================== */
+    .main-content {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 40px;
+      align-items: start;
+    }
+
+    @media (max-width: 992px) {
+      .main-content {
+        grid-template-columns: 1fr;
+      }
+
+      .sticky-cta {
+        position: static;
+        margin-top: 40px;
+      }
+    }
+
+    .sticky-cta {
+      position: sticky;
+      top: 24px;
+    }
+
+    .cta-card {
+      background: var(--bg-gradient);
+      border-radius: var(--radius);
+      padding: 40px 32px;
+      color: #FFFFFF;
+      text-align: center;
+      box-shadow: var(--shadow-xl);
+    }
+
+    .cta-card h3 {
+      color: #FFFFFF;
+      margin-bottom: 16px;
+      font-size: 1.75rem;
+    }
+
+    .cta-card p {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 24px;
+      font-size: 1rem;
+    }
+
+    .urgency-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-size: 0.9375rem;
+      font-weight: 500;
+    }
+
+    .whatsapp-info {
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .whatsapp-info p {
+      font-size: 0.875rem;
+      margin-bottom: 12px;
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+      color: #FFFFFF;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .whatsapp-btn:hover {
+      background: #20BA5A;
+      transform: scale(1.05);
+    }
+
+    /* ========================================
+       BENEFÍCIOS / FEATURES
+       ======================================== */
+    .benefits {
+      background: var(--bg-secondary);
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .benefit {
+      display: flex;
+      gap: 20px;
+    }
+
+    .benefit-icon {
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      background: var(--bg-gradient);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+    }
+
+    .benefit-content h4 {
+      margin-bottom: 8px;
+      font-size: 1.125rem;
+    }
+
+    .benefit-content p {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+    }
+
+    /* ========================================
+       SOCIAL PROOF
+       ======================================== */
+    .social-proof {
+      background: var(--bg-primary);
+      text-align: center;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 64px;
+      margin-top: 48px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      background: var(--bg-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    /* ========================================
+       FOOTER
+       ======================================== */
+    footer {
+      background: var(--text-primary);
+      color: rgba(255, 255, 255, 0.8);
+      padding: 48px 0 24px;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    footer h4 {
+      color: #FFFFFF;
+      margin-bottom: 16px;
+    }
+
+    footer p {
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 12px;
+      font-size: 0.9375rem;
+    }
+
+    .footer-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.2);
+      margin: 32px 0 24px;
+    }
+
+    .footer-bottom {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* ========================================
+       ANIMAÇÕES
+       ======================================== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    /* ========================================
+       RESPONSIVIDADE
+       ======================================== */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 60px 0 50px;
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      .cta-group {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .stats {
+        gap: 32px;
+      }
+
+      .category-card {
+        padding: 18px;
+      }
+
+      .categories-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .benefit {
+        gap: 14px;
+      }
+
+      .benefit-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.4rem;
+      }
+
+      h2 {
+        font-size: 1.5rem !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .categories-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .navbar-logo img {
+        height: 38px;
+      }
+
+      .navbar-brand-name {
+        font-size: 0.95rem;
+      }
+    }
+
+    /* ========================================
+       ACESSIBILIDADE
+       ======================================== */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--primary);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ========================================
+       ANNOUNCEMENT BAR
+       ======================================== -->
+  <div class="announcement-bar" role="alert">
+    <span class="pulse-dot"></span>
+    <span>🔥 Atendimento <strong>HOJE</strong> — Técnico disponível agora em SP e região</span>
+    <a href="#formulario-diagnostico" class="bar-cta">Solicitar Agora →</a>
+  </div>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7HXPKD8" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ========================================
+       NAVBAR PROFISSIONAL
+       ======================================== -->
+  <nav class="navbar" role="navigation" aria-label="Menu principal">
+    <div class="navbar-inner">
+      <!-- Logo -->
+      <a href="#" class="navbar-logo" aria-label="Doutor Resolve - Início">
+        <img src="img.png" alt="Marcas atendidas: Brastemp, Consul, Electrolux">
+        <div class="navbar-brand-text">
+          <span class="navbar-brand-name">🔧 Doutor Resolve</span>
+          <span class="navbar-brand-sub">Máquinas de Lavar</span>
+        </div>
+      </a>
+
+      <!-- Ações desktop -->
+      <div class="navbar-actions">
+        <a href="#formulario-diagnostico" class="navbar-cta-secondary">
+          🩺 Diagnóstico Grátis
+        </a>
+        <a href="https://wa.me/5511980375558?text=Olá!%20Preciso%20de%20ajuda%20com%20minha%20máquina%20de%20lavar"
+          class="navbar-wpp" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+          </svg>
+          WhatsApp
+        </a>
+      </div>
+
+      <!-- Hamburguer (mobile) -->
+      <button class="navbar-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Menu mobile expandido -->
+    <div class="navbar-mobile" id="navMobile" role="menu">
+      <a href="#formulario-diagnostico" class="navbar-cta-secondary" onclick="closeNav()">🩺 Diagnóstico Grátis</a>
+      <a href="https://wa.me/5511980375558?text=Olá!%20Preciso%20de%20ajuda%20com%20minha%20máquina%20de%20lavar"
+        class="navbar-wpp" target="_blank" rel="noopener" onclick="closeNav()">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+        Falar no WhatsApp
+      </a>
+    </div>
+  </nav>
+
+  <!-- WhatsApp Flutuante -->
+  <a href="https://wa.me/5511980375558?text=Olá!%20Preciso%20de%20ajuda%20com%20minha%20máquina%20de%20lavar"
+    class="wpp-float" target="_blank" rel="noopener" aria-label="WhatsApp" title="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+    </svg>
+  </a>
+
+  <!-- ========================================
+       HEADER / HERO
+       ======================================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content animate-fade-in">
+
+        <!-- Social proof topo -->
+        <div class="hero-social-proof">
+          <div class="hsp-item">
+            <span class="hsp-stars">★★★★★</span>
+            <span><strong>4.9/5</strong> — 847 avaliações</span>
+          </div>
+          <div class="hsp-divider"></div>
+          <div class="hsp-item">✅ <strong>+3.200</strong> clientes atendidos</div>
+          <div class="hsp-divider"></div>
+          <div class="hsp-item">⚡ Resposta em <strong>~5 min</strong></div>
+        </div>
+
+        <h1>
+          Sua Máquina "Adoeceu"?<br />
+          <span
+            style="background: linear-gradient(135deg, #a5b4fc 0%, #ffffff 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">O
+            Doutor Resolve.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Diagnóstico <strong>técnico e gratuito</strong> em 5 minutos. Descubra o problema,
+          receba o orçamento e agende o técnico — tudo pelo WhatsApp.
+        </p>
+
+        <div class="cta-group">
+          <a href="#formulario-diagnostico" class="btn btn-white" style="font-size:1.1rem; padding: 20px 44px;">
+            <span class="btn-icon">🔧</span>
+            <span>Diagnóstico Grátis Agora</span>
+          </a>
+          <a href="https://wa.me/5511980375558?text=Olá!%20Preciso%20de%20ajuda%20com%20minha%20máquina%20de%20lavar"
+            class="btn btn-success" target="_blank" rel="noopener" style="font-size:1.1rem; padding: 20px 36px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" style="flex-shrink:0">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+            </svg>
+            <span>Falar no WhatsApp</span>
+          </a>
+        </div>
+
+        <p style="color:rgba(255,255,255,0.6); font-size:0.82rem; margin-top:16px;">
+          🔒 100% Gratuito • Sem compromisso • Atendimento humanizado
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       BRAND STRIP
+       ======================================== -->
+  <div class="brand-strip">
+    <div class="brand-strip-inner">
+      <span class="brand-strip-label">Marcas atendidas</span>
+      <span class="brand-pill">🔵 Brastemp</span>
+      <span class="brand-pill">🟢 Consul</span>
+      <span class="brand-pill">⚪ Electrolux</span>
+      <span class="brand-pill">🔴 Samsung</span>
+      <span class="brand-pill">🟡 LG</span>
+      <span class="brand-pill">🟠 Whirlpool</span>
+      <span class="brand-pill">⚫ Panasonic</span>
+    </div>
+  </div>
+
+  <!-- ========================================
+       MAIN CONTENT
+       ======================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="main-content">
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <div>
+
+          <!-- COMO FUNCIONA -->
+          <!-- <div id="como-funciona" class="steps">
+            <h2 style="text-align: center;">Como Funciona? Simples em 3 Passos</h2>
+            <p style="text-align: center; color: var(--text-secondary); max-width: 700px; margin: 0 auto 0;">
+              Não precisa ser técnico. Responda perguntas simples e deixe que a gente cuide do resto.
+            </p>
+
+            <div class="steps-container">
+              <div class="step">
+                <div class="step-number">1</div>
+                <h3 class="step-title">Descreva o Problema</h3>
+                <p class="step-description">
+                  Preencha o formulário rápido sobre o que está acontecendo com sua máquina. Barulho estranho? Não liga?
+                  Vazando água?
+                </p>
+              </div>
+
+              <div class="step">
+                <div class="step-number">2</div>
+                <h3 class="step-title">Escolha a Categoria</h3>
+                <p class="step-description">
+                  Selecione se o problema parece Simples, Intermediário, Complexo ou Urgente com base nas descrições.
+                </p>
+              </div>
+
+              <div class="step">
+                <div class="step-number">3</div>
+                <h3 class="step-title">Receba no WhatsApp</h3>
+                <p class="step-description">
+                  Seus dados são enviados direto para o WhatsApp do técnico. Ele entra em contato rapidamente com
+                  orçamento!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CATEGORIAS DE REPARO -->
+          <div id="categorias" style="margin-top: 80px;">
+            <h2 style="text-align: center;">Tipos de Reparo: Entenda Seu Problema</h2>
+            <p style="text-align: center; color: var(--text-secondary); max-width: 700px; margin: 16px auto 0;">
+              Classificamos cada caso para você ter transparência total sobre tempo e custo estimado.
+            </p>
+
+            <div class="categories-grid">
+              <div class="category-card simple" data-category="Simples" onclick="selectCategory('Simples')"
+                style="min-width: 0;">
+                <span class="category-icon">🟢</span>
+                <h4 class="category-title">Reparo Simples</h4>
+                <p class="category-description">
+                  Limpeza de filtros, mangueira dobrada, ajustes básicos. Problemas que não exigem peças caras.
+                </p>
+                <span class="category-time">⏱ 30min - 1h | 💰 Econômico</span>
+              </div>
+
+              <div class="category-card intermediate" data-category="Intermediário"
+                onclick="selectCategory('Intermediário')">
+                <span class="category-icon">🟡</span>
+                <h4 class="category-title">Reparo Intermediário</h4>
+                <p class="category-description">
+                  Troca de bomba d'água, válvulas, vedações. Resolvido em poucas horas com peças de reposição.
+                </p>
+                <span class="category-time">⏱ 2-4h | 💰 Moderado</span>
+              </div>
+
+              <div class="category-card complex" data-category="Complexo" onclick="selectCategory('Complexo')">
+                <span class="category-icon">🟠</span>
+                <h4 class="category-title">Reparo Complexo</h4>
+                <p class="category-description">
+                  Motor, placa eletrônica, sistema elétrico. Requer diagnóstico técnico presencial e pode levar 1-2
+                  dias.
+                </p>
+                <span class="category-time">⏱ 1-2 dias | 💰 Alto</span>
+              </div>
+
+              <div class="category-card urgent" data-category="Urgente" onclick="selectCategory('Urgente')">
+                <span class="category-icon">🔴</span>
+                <h4 class="category-title">Atenção Urgente</h4>
+                <p class="category-description">
+                  Curto-circuito, vazamento severo, risco elétrico. Atendimento prioritário para evitar danos maiores.
+                </p>
+                <span class="category-time">⚡ Atendimento Imediato</span>
+              </div>
+            </div>
+          </div>
+          -->
+
+
+
+
+          <div id="como-funciona" class="steps">
+            <h2 style="text-align: center;">O Processo de Cura da Sua Máquina</h2>
+            <p style="text-align: center; color: var(--text-secondary); max-width: 700px; margin: 0 auto 0;">
+              Um sistema inteligente para identificar e resolver o problema sem complicação.
+            </p>
+
+            <div class="steps-container">
+              <div class="step">
+                <div class="step-number">1</div>
+                <h3 class="step-title">Relate os Sintomas</h3>
+                <p class="step-description">
+                  Conte o que a "paciente" está sentindo. Barulhos, vazamentos ou falhas no funcionamento?
+                </p>
+              </div>
+
+              <div class="step">
+                <div class="step-number">2</div>
+                <h3 class="step-title">Análise Clínica</h3>
+                <p class="step-description">
+                  Nosso sistema classifica a gravidade do problema: Simples, Intermediário ou UTI (Urgente).
+                </p>
+              </div>
+
+              <div class="step">
+                <div class="step-number">3</div>
+                <h3 class="step-title">Diagnóstico e Solução</h3>
+                <p class="step-description">
+                  Receba o laudo completo e o orçamento para o conserto diretamente no seu WhatsApp.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CATEGORIAS DE REPARO (TRIAGEM) -->
+          <div id="categorias" style="margin-top: 80px;">
+            <h2 style="text-align: center;">Triagem: Qual a Gravidade?</h2>
+            <p style="text-align: center; color: var(--text-secondary); max-width: 700px; margin: 16px auto 0;">
+              Nossa equipe classifica o estado da sua máquina para o tratamento adequado.
+            </p>
+
+            <div class="categories-grid">
+              <div class="category-card simple" data-category="Simples" onclick="selectCategory('Simples')">
+                <span class="category-icon">🩹</span>
+                <h4 class="category-title">Caso Leve</h4>
+                <p class="category-description">
+                  Pequenos ajustes, limpeza de filtros ou objetos presos. "Curativos" rápidos e baratos.
+                </p>
+                <span class="category-time">⏱ 30min - 1h | 💰 Baixo Custo</span>
+              </div>
+
+              <div class="category-card intermediate" data-category="Intermediário"
+                onclick="selectCategory('Intermediário')">
+                <span class="category-icon">💊</span>
+                <h4 class="category-title">Caso Moderado</h4>
+                <p class="category-description">
+                  Troca de peças desgastadas (bombas, válvulas). Requer "medicação" (peças novas).
+                </p>
+                <span class="category-time">⏱ 2-4h | 💰 Custo Médio</span>
+              </div>
+
+              <div class="category-card complex" data-category="Complexo" onclick="selectCategory('Complexo')">
+                <span class="category-icon">🩺</span>
+                <h4 class="category-title">Caso Complexo</h4>
+                <p class="category-description">
+                  Problemas no "coração" (motor) ou "cérebro" (placa). Pode precisar de "cirurgia".
+                </p>
+                <span class="category-time">⏱ 1-2 dias | 💰 Investimento Maior</span>
+              </div>
+
+              <div class="category-card urgent" data-category="Urgente" onclick="selectCategory('Urgente')">
+                <span class="category-icon">🚑</span>
+                <h4 class="category-title">Emergência (UTI)</h4>
+                <p class="category-description">
+                  Curto-circuito, cheiro de queimado ou vazamento grave. Desligue da tomada imediatamente!
+                </p>
+                <span class="category-time">⚡ Atendimento Prioritário</span>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <!-- FORMULÁRIO DE DIAGNÓSTICO -->
+          <div id="formulario-diagnostico" style="margin-top: 80px;">
+            <div class="card" style="max-width: 700px; margin: 0 auto;">
+              <h2 style="margin-bottom: 8px;">Solicitar Diagnóstico Grátis</h2>
+              <p style="color: var(--text-secondary); margin-bottom: 32px;">
+                Preencha os dados abaixo e enviaremos seu diagnóstico direto para o WhatsApp do técnico especializado.
+              </p>
+
+              <form id="diagnosticoForm" onsubmit="enviarParaWhatsApp(event)">
+                <div class="form-group">
+                  <label class="form-label" for="nome">
+                    Seu Nome<span class="required">*</span>
+                  </label>
+                  <input type="text" id="nome" name="nome" class="form-input" placeholder="Ex: João Silva" required
+                    minlength="3" />
+                  <span class="form-error" id="nome-error">Por favor, insira seu nome completo.</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="telefone">
+                    Seu Telefone/WhatsApp<span class="required">*</span>
+                  </label>
+                  <input type="tel" id="telefone" name="telefone" class="form-input" placeholder="(11) 99999-9999"
+                    required />
+                  <span class="form-hint">Para entrarmos em contato com você</span>
+                  <span class="form-error" id="telefone-error">Por favor, insira um telefone válido.</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="categoria">
+                    Tipo de Problema<span class="required">*</span>
+                  </label>
+                  <select id="categoria" name="categoria" class="form-select" required>
+                    <option value="">Selecione a categoria do problema</option>
+                    <option value="Simples">🟢 Simples - Limpeza/Ajustes Básicos</option>
+                    <option value="Intermediário">🟡 Intermediário - Troca de Peças</option>
+                    <option value="Complexo">🟠 Complexo - Motor/Placa</option>
+                    <option value="Urgente">🔴 Urgente - Risco Elétrico</option>
+                  </select>
+                  <span class="form-hint">Clique nas categorias acima para saber mais</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="problema">
+                    Descreva o Problema<span class="required">*</span>
+                  </label>
+                  <textarea id="problema" name="problema" class="form-textarea"
+                    placeholder="Ex: A máquina não centrifuga e faz barulho estranho quando liga. Às vezes vaza água pela parte de baixo..."
+                    required minlength="20"></textarea>
+                  <span class="form-hint">Quanto mais detalhes, melhor o diagnóstico!</span>
+                  <span class="form-error" id="problema-error">Descreva o problema com mais detalhes (mínimo 20
+                    caracteres).</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="marca">
+                    Marca da Máquina (opcional)
+                  </label>
+                  <input type="text" id="marca" name="marca" class="form-input"
+                    placeholder="Ex: Brastemp, Electrolux, Consul..." />
+                </div>
+
+                <button type="submit" class="btn btn-success" style="width: 100%;">
+                  <span class="btn-icon">📱</span>
+                  <span>Enviar para WhatsApp</span>
+                </button>
+
+                <p style="text-align: center; font-size: 0.875rem; color: var(--text-muted); margin-top: 16px;">
+                  🔒 Seus dados serão enviados diretamente para o WhatsApp do técnico
+                </p>
+              </form>
+            </div>
+          </div>
+
+          <!-- BENEFÍCIOS -->
+          <div class="benefits" style="margin-top: 80px; padding: 60px 0; border-radius: var(--radius);">
+            <h2 style="text-align: center;">Por Que Usar Nosso Diagnóstico?</h2>
+
+            <div class="benefits-grid">
+              <div class="benefit">
+                <div class="benefit-icon">⚡</div>
+                <div class="benefit-content">
+                  <h4>Diagnóstico em 5 Minutos</h4>
+                  <p>Sem esperar dias por um técnico. Saiba agora se vale a pena consertar ou não.</p>
+                </div>
+              </div>
+
+              <div class="benefit">
+                <div class="benefit-icon">💰</div>
+                <div class="benefit-content">
+                  <h4>100% Gratuito</h4>
+                  <p>Zero custo. Você paga apenas se decidir contratar um dos técnicos recomendados.</p>
+                </div>
+              </div>
+
+              <div class="benefit">
+                <div class="benefit-icon">🎯</div>
+                <div class="benefit-content">
+                  <h4>Classificação Precisa</h4>
+                  <p>Sistema inteligente baseado em milhares de reparos. Evite surpresas no orçamento.</p>
+                </div>
+              </div>
+
+              <div class="benefit">
+                <div class="benefit-icon">🔒</div>
+                <div class="benefit-content">
+                  <h4>Privacidade Garantida</h4>
+                  <p>Seus dados são usados apenas para conectar você com técnicos. Sem spam, sem venda de dados.</p>
+                </div>
+              </div>
+
+              <div class="benefit">
+                <div class="benefit-icon">📱</div>
+                <div class="benefit-content">
+                  <h4>Tudo pelo WhatsApp</h4>
+                  <p>Receba orçamento e tire dúvidas direto no WhatsApp. Praticidade total.</p>
+                </div>
+              </div>
+
+              <div class="benefit">
+                <div class="benefit-icon">⭐</div>
+                <div class="benefit-content">
+                  <h4>Técnicos Qualificados</h4>
+                  <p>Conectamos você apenas com profissionais experientes e bem avaliados.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SIDEBAR CTA (STICKY) -->
+        <aside class="sticky-cta">
+          <div class="cta-card">
+            <h3>Comece Agora!</h3>
+            <p>Preencha o formulário rápido e envie direto pelo WhatsApp.</p>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfnuaA--i-cT-xw1jCER1ZbehXdTfCR5mDWZxTl6RSUdCQypA/viewform?usp=dialog"
+              class="btn btn-white" style="width: 100%; background: #FFFFFF; color: var(--primary);">
+              <span class="btn-icon">🚀</span>
+              <span>Preencher Formulário</span>
+            </a>
+
+            <div class="urgency-text">
+              <span>⏰</span>
+              <span>Resposta em até 5 minutos</span>
+            </div>
+
+            <div class="whatsapp-info">
+              <p><strong>Prefere falar direto?</strong></p>
+              <a href="https://wa.me/5511980375558?text=Olá!%20Preciso%20de%20ajuda%20com%20minha%20máquina%20de%20lavar"
+                class="whatsapp-btn" target="_blank" rel="noopener">
+                <span>💬</span>
+                <span>Falar no WhatsApp</span>
+              </a>
+              <p style="font-size: 0.75rem; margin-top: 12px;">
+              </p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       STATS SECTION
+       ======================================== -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Números que Comprovam Nossa Confiança</h2>
+        <p class="section-lead" style="color:rgba(255,255,255,0.6)">
+          Mais de 5 anos ajudando famílias a resolverem problemas com máquinas de lavar.
+        </p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">🏠</div>
+          <div class="stat-number" data-target="3200" data-suffix="+">0</div>
+          <div class="stat-label">Clientes Atendidos</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">⭐</div>
+          <div class="stat-number" data-target="4.9" data-suffix="/5" data-decimal="true">0</div>
+          <div class="stat-label">Nota Média Google</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">⚡</div>
+          <div class="stat-number" data-target="5" data-suffix=" min">0</div>
+          <div class="stat-label">Tempo de Resposta</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🔧</div>
+          <div class="stat-number" data-target="98" data-suffix="%">0</div>
+          <div class="stat-label">Taxa de Resolução</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       TESTIMONIALS
+       ======================================== -->
+  <section class="section testimonials" id="depoimentos">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">💬 Depoimentos Reais</div>
+        <h2>O Que Nossos Clientes Dizem</h2>
+        <p class="section-lead">Mais de 847 avaliações 5 estrelas. Veja o que quem já usou pensa.</p>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Minha Brastemp estava travando no enxágue há 2 semanas. Em menos de 10 minutos após enviar o formulário,
+            o técnico já entrou em contato e no dia seguinte estava resolvido. Serviço impecável!"
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MC</div>
+            <div>
+              <div class="testimonial-name">Maria Claudia S.</div>
+              <div class="testimonial-role">Peruíbe, SP</div>
+              <div class="testimonial-badge">✅ Reparo Realizado</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Achei que ia ter que comprar uma máquina nova. Através do diagnóstico descobri que era apenas
+            a bomba d'água. Economizei mais de R$1.200. Recomendo demais, atendimento foi rápido e honesto!"
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RP</div>
+            <div>
+              <div class="testimonial-name">Mongaguá</div>
+              <div class="testimonial-role">Itanhaém, SP</div>
+              <div class="testimonial-badge">✅ Economizou R$1.200</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Electrolux fazia barulho estranho e estava com medo de estragar mais. O diagnóstico foi certeiro
+            — era o rolamento. Técnico veio no mesmo dia, super profissional. Já indiquei para 3 amigas!"
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AO</div>
+            <div>
+              <div class="testimonial-name">Ana Oliveira</div>
+              <div class="testimonial-role">Santos, SP</div>
+              <div class="testimonial-badge">✅ Atendimento no Mesmo Dia</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       FAQ
+       ======================================== -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">❓ Perguntas Frequentes</div>
+        <h2>Dúvidas? A Gente Responde</h2>
+        <p class="section-lead">Respondemos as dúvidas mais comuns antes mesmo de você perguntar.</p>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>O diagnóstico é realmente gratuito?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sim, 100% gratuito! Você preenche o formulário, descrevemos o problema da sua máquina e você recebe
+              o orçamento por WhatsApp sem pagar nada. Só há custo se você decidir contratar o serviço de reparo.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Qual o prazo de resposta após preencher o formulário?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Em média respondemos em até 5 minutos durante o horário comercial (8h às 20h, de segunda a sábado).
+              Pedidos feitos fora desse horário são respondidos na manhã do próximo dia útil.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Quais marcas e modelos vocês atendem?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Atendemos todas as principais marcas: Brastemp, Consul, Electrolux, Samsung, LG, Panasonic, Whirlpool
+              e outras. Tanto máquinas de coluna quanto lava e seca. Se tiver dúvida, entre em contato pelo WhatsApp.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Minha máquina é muito antiga, ainda vale consertar?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Boa pergunta! Dependendo da marca, máquinas com mais de 10 anos ainda têm peças disponíveis e
+              vale muito a pena consertar — especialmente se o problema for simples. O técnico vai ser honesto
+              e só indicar o conserto se realmente compensar financeiramente.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Vocês atendem em qual região?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Atendemos a Baixada Santista: Santos, São Vicente, Praia Grande, Guarujá, Cubatão, Mongaguá, Itanhaém e
+              Peruíbe.
+              Em caso de dúvida sobre sua cidade, mande mensagem no WhatsApp e verificamos a disponibilidade.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       CTA FINAL
+       ======================================== -->
+  <section class="cta-final">
+    <div class="container">
+      <div class="section-label" style="background:rgba(255,255,255,0.15); color:#fff; margin-bottom:20px;">🚀 Comece
+        Agora</div>
+      <h2>Pronto Para Resolver de Vez?</h2>
+      <p>Mais de 3.200 clientes já resolveram seus problemas com a gente. Você é o próximo!</p>
+      <div class="btn-cta-group">
+        <a href="#formulario-diagnostico" class="btn-outline-white">
+          🔧 Fazer Diagnóstico Grátis
+        </a>
+        <a href="https://wa.me/5511980375558?text=Olá!%20Preciso%20de%20ajuda%20com%20minha%20máquina%20de%20lavar"
+          class="btn-wpp-large" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+          </svg>
+          Chamar no WhatsApp Agora
+        </a>
+      </div>
+      <div class="cta-trust-row">
+        <span class="cta-trust-item">✅ Sem compromisso</span>
+        <span class="cta-trust-item">🔒 Dados protegidos</span>
+        <span class="cta-trust-item">⚡ Resposta em 5 min</span>
+        <span class="cta-trust-item">❌ Zero custo</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       FOOTER
+       ======================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <img src="img.png" alt="Marcas atendidas"
+          style="height:42px; width:auto; margin:0 auto 16px; display:block; opacity:0.6; filter:brightness(0) invert(1);">
+        <h4 style="font-size:1.1rem;">🔧 Doutor Resolve — Máquinas de Lavar</h4>
+        <p>Atendimento na Baixada Santista • (11) 98037-5558</p>
+        <div style="display:flex; gap:12px; justify-content:center; margin:16px 0; flex-wrap:wrap;">
+          <a href="https://wa.me/5511980375558" target="_blank"
+            style="color:rgba(255,255,255,0.7); font-size:0.875rem; text-decoration:none;">💬 WhatsApp</a>
+          <span style="color:rgba(255,255,255,0.3)">•</span>
+          <a href="#formulario-diagnostico"
+            style="color:rgba(255,255,255,0.7); font-size:0.875rem; text-decoration:none;">🔧 Diagnóstico Grátis</a>
+          <span style="color:rgba(255,255,255,0.3)">•</span>
+          <a href="#faq" style="color:rgba(255,255,255,0.7); font-size:0.875rem; text-decoration:none;">❓ FAQ</a>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          © 2025 Doutor Resolve • Todos os direitos reservados
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================
+       SCRIPTS
+       ======================================== -->
+  <script>
+    // CONFIGURAÇÃO - SUBSTITUA PELO SEU NÚMERO NO FORMATO: 5511999999999
+    const NUMERO_WHATSAPP = '5511980375558'; // ⚠️ ALTERE AQUI
+
+    // Selecionar categoria ao clicar nos cards
+    function selectCategory(categoria) {
+      // Remove seleção anterior
+      document.querySelectorAll('.category-card').forEach(card => {
+        card.classList.remove('selected');
+      });
+
+      // Adiciona seleção ao card clicado
+      const selectedCard = document.querySelector(`[data-category="${categoria}"]`);
+      if (selectedCard) {
+        selectedCard.classList.add('selected');
+      }
+
+      // Atualiza o select do formulário
+      document.getElementById('categoria').value = categoria;
+
+      // Scroll suave até o formulário
+      document.getElementById('formulario-diagnostico').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+
+    // Máscara de telefone
+    document.getElementById('telefone').addEventListener('input', function (e) {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value.length <= 11) {
+        value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
+        value = value.replace(/(\d)(\d{4})$/, '$1-$2');
+        e.target.value = value;
+      }
+    });
+
+    // Função para enviar dados para WhatsApp
+    function enviarParaWhatsApp(event) {
+      event.preventDefault();
+
+      // Capturar dados do formulário
+      const nome = document.getElementById('nome').value.trim();
+      const telefone = document.getElementById('telefone').value.trim();
+      const categoria = document.getElementById('categoria').value;
+      const problema = document.getElementById('problema').value.trim();
+      const marca = document.getElementById('marca').value.trim() || 'Não informada';
+
+      // Validação básica
+      if (!nome || nome.length < 3) {
+        alert('Por favor, insira seu nome completo.');
+        document.getElementById('nome').focus();
+        return;
+      }
+
+      if (!telefone || telefone.length < 14) {
+        alert('Por favor, insira um telefone válido.');
+        document.getElementById('telefone').focus();
+        return;
+      }
+
+      if (!categoria) {
+        alert('Por favor, selecione a categoria do problema.');
+        document.getElementById('categoria').focus();
+        return;
+      }
+
+      if (!problema || problema.length < 20) {
+        alert('Por favor, descreva o problema com mais detalhes (mínimo 20 caracteres).');
+        document.getElementById('problema').focus();
+        return;
+      }
+
+      // Formatar mensagem para WhatsApp
+      const mensagem = `
+🔧 *DIAGNÓSTICO RÁPIDO - MÁQUINA DE LAVAR*
+
+*Nome:* ${nome}
+*Telefone:* ${telefone}
+*Categoria:* ${categoria}
+*Marca:* ${marca}
+
+*Problema Descrito:*
+${problema}
+
+---
+_Enviado via Diagnóstico Rápido_
+      `.trim();
+
+      // Codificar mensagem para URL
+      const mensagemCodificada = encodeURIComponent(mensagem);
+
+      // Construir URL do WhatsApp
+      const urlWhatsApp = `https://api.whatsapp.com/send?phone=${NUMERO_WHATSAPP}&text=${mensagemCodificada}`;
+
+      // Abrir WhatsApp em nova aba
+      window.open(urlWhatsApp, '_blank');
+
+      // Opcional: Limpar formulário após envio
+      // document.getElementById('diagnosticoForm').reset();
+
+      // Feedback visual
+      alert('✅ Redirecionando para o WhatsApp! Aguarde o carregamento da conversa.');
+    }
+
+    // Smooth scroll para links internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // ========================================
+    // FAQ ACCORDION
+    // ========================================
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const answer = item.querySelector('.faq-answer');
+      const isOpen = item.classList.contains('open');
+      // fecha todos
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-answer').classList.remove('open');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.classList.add('open');
+      }
+    }
+
+    // ========================================
+    // COUNTER ANIMATION
+    // ========================================
+    function animateCounters() {
+      document.querySelectorAll('[data-target]').forEach(el => {
+        const target = parseFloat(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const isDecimal = el.dataset.decimal === 'true';
+        const duration = 1800;
+        const step = 16;
+        const steps = duration / step;
+        let current = 0;
+        const increment = target / steps;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          el.textContent = (isDecimal ? current.toFixed(1) : Math.floor(current)) + suffix;
+        }, step);
+      });
+    }
+
+    // Disparar contador quando a seção ficar visível
+    const statsSection = document.querySelector('.stats-section');
+    if (statsSection) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounters();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      observer.observe(statsSection);
+    }
+
+    // ========================================
+    // SCROLL REVEAL (fade-in elements)
+    // ========================================
+    const revealEls = document.querySelectorAll('.testimonial-card, .faq-item, .stat-card, .benefit, .category-card');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }, i * 80);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    revealEls.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      revealObserver.observe(el);
+    });
+
+    // Navbar hamburger
+    const navToggle = document.getElementById('navToggle');
+    const navMobile = document.getElementById('navMobile');
+
+    navToggle.addEventListener('click', function () {
+      const isOpen = navMobile.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    function closeNav() {
+      navMobile.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    // Fechar menu ao clicar fora
+    document.addEventListener('click', function (e) {
+      if (!navToggle.contains(e.target) && !navMobile.contains(e.target)) {
+        closeNav();
+      }
+    });
+
+    // Scroll na navbar: adiciona sombra mais forte
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 10) {
+        navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.15)';
+      } else {
+        navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.10)';
+      }
+    });
+  </script>
+
+</body>
+
+</html>
